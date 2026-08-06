@@ -52,18 +52,83 @@ document.addEventListener("DOMContentLoaded", () => {
         }).join('');
     }
 
+    let currentSort = { key: 'activeIncidents', dir: 'desc' };
+
+    function sortData(stores) {
+        return stores.sort((a, b) => {
+            let valA = a[currentSort.key];
+            let valB = b[currentSort.key];
+
+            // Si ordenamos por incidencias, mantener orden secundario por nombre
+            if (currentSort.key === 'activeIncidents' && valA === valB) {
+                return currentSort.dir === 'desc' 
+                    ? a.name.localeCompare(b.name) 
+                    : b.name.localeCompare(a.name);
+            }
+
+            if (typeof valA === 'string') {
+                return currentSort.dir === 'asc' 
+                    ? valA.localeCompare(valB) 
+                    : valB.localeCompare(valA);
+            } else {
+                return currentSort.dir === 'asc' ? valA - valB : valB - valA;
+            }
+        });
+    }
+
+    function updateSortIndicators() {
+        const headers = {
+            'name': document.getElementById('th-name'),
+            'dailyRevenue': document.getElementById('th-revenue'),
+            'stockStatus': document.getElementById('th-inventory'),
+            'activeIncidents': document.getElementById('th-incidents')
+        };
+
+        for (const [key, th] of Object.entries(headers)) {
+            if (!th) continue;
+            const span = th.querySelector('span');
+            if (key === currentSort.key) {
+                span.innerText = currentSort.dir === 'asc' ? ' ▲' : ' ▼';
+            } else {
+                span.innerText = '';
+            }
+        }
+    }
+
+    function handleSort(key) {
+        if (currentSort.key === key) {
+            currentSort.dir = currentSort.dir === 'asc' ? 'desc' : 'asc';
+        } else {
+            currentSort.key = key;
+            currentSort.dir = (key === 'name') ? 'asc' : 'desc'; // Default text to asc, numbers to desc
+        }
+        updateSortIndicators();
+        
+        // Refilter and re-render
+        const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+        const filtered = allStores.filter(store => 
+            store.name.toLowerCase().includes(searchTerm) || 
+            store.city.toLowerCase().includes(searchTerm) || 
+            store.type.toLowerCase().includes(searchTerm)
+        );
+        renderTable(sortData(filtered));
+    }
+
+    // Attach event listeners to headers
+    const thName = document.getElementById('th-name');
+    const thRevenue = document.getElementById('th-revenue');
+    const thInventory = document.getElementById('th-inventory');
+    const thIncidents = document.getElementById('th-incidents');
+
+    if (thName) thName.addEventListener('click', () => handleSort('name'));
+    if (thRevenue) thRevenue.addEventListener('click', () => handleSort('dailyRevenue'));
+    if (thInventory) thInventory.addEventListener('click', () => handleSort('stockStatus'));
+    if (thIncidents) thIncidents.addEventListener('click', () => handleSort('activeIncidents'));
+
     // Escuchar cambios en Firestore
     onSnapshot(collection(db, "stores"), (snapshot) => {
         allStores = snapshot.docs.map(doc => doc.data());
-        // Ordenar por incidencias (primero las de rojo) y luego alfabéticamente
-        allStores.sort((a, b) => {
-            if (b.activeIncidents !== a.activeIncidents) {
-                return b.activeIncidents - a.activeIncidents;
-            }
-            return a.name.localeCompare(b.name);
-        });
         
-        // Aplicar el filtro actual si lo hay
         const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
         const filtered = allStores.filter(store => 
             store.name.toLowerCase().includes(searchTerm) || 
@@ -71,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
             store.type.toLowerCase().includes(searchTerm)
         );
         
-        renderTable(filtered);
+        renderTable(sortData(filtered));
     });
 
     // Búsqueda en tiempo real
@@ -83,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 store.city.toLowerCase().includes(searchTerm) || 
                 store.type.toLowerCase().includes(searchTerm)
             );
-            renderTable(filtered);
+            renderTable(sortData(filtered));
         });
     }
 });
