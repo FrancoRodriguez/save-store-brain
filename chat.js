@@ -1,5 +1,5 @@
 import { auth, db } from './firebase-config.js';
-import { collection, addDoc, updateDoc, doc, query, where, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+import { collection, addDoc, updateDoc, deleteDoc, doc, query, where, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
 
 // Variable global para rastrear si estamos editando una nota
 window.editingNoteId = null;
@@ -8,9 +8,11 @@ function renderComment(docData, docId) {
     const time = docData.timestamp ? new Date(docData.timestamp.toMillis()).toLocaleString() : 'Justo ahora';
     const isMe = auth.currentUser && auth.currentUser.email === docData.authorEmail;
     
-    // Si es mi nota, muestro un botón de editar
+    // Si es mi nota, muestro un botón de editar y otro de borrar
     const editButton = isMe ? 
         `<button onclick="window.startEditNote('${docId}', '${docData.phase}')" style="background:none; border:none; color: var(--primary-color); cursor: pointer; font-size: 12px; text-decoration: underline;">Editar</button>` : '';
+    const deleteButton = isMe ?
+        `<button onclick="window.deleteNote('${docId}', '${docData.phase}')" style="background:none; border:none; color: #ef4444; cursor: pointer; font-size: 12px; text-decoration: underline;">Borrar</button>` : '';
 
     return `
         <div style="background: ${isMe ? 'var(--bg-card)' : '#f3f4f6'}; padding: 10px; border-radius: 8px; font-size: 14px; border: 1px solid ${isMe ? 'var(--border-color)' : '#e5e7eb'}; margin-bottom: 8px;" id="note-${docId}">
@@ -18,6 +20,7 @@ function renderComment(docData, docId) {
                 <strong>${docData.authorName || docData.authorEmail}</strong>
                 <div style="display: flex; gap: 8px; align-items: center;">
                     ${editButton}
+                    ${deleteButton}
                     <span>${time}</span>
                 </div>
             </div>
@@ -25,6 +28,20 @@ function renderComment(docData, docId) {
         </div>
     `;
 }
+
+// Función global para borrar
+window.deleteNote = (docId, phaseId) => {
+    if (confirm("¿Estás seguro de que quieres borrar esta nota?")) {
+        deleteDoc(doc(db, "proposal_notes", docId)).then(() => {
+            if (window.editingNoteId === docId) {
+                cancelEdit(phaseId);
+            }
+        }).catch((error) => {
+            console.error("Error deleting document: ", error);
+            alert("Error al borrar la nota.");
+        });
+    }
+};
 
 // Función global para iniciar la edición
 window.startEditNote = (docId, phaseId) => {
