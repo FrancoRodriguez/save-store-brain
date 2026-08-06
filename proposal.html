@@ -241,6 +241,28 @@
             btn.disabled = true;
             btn.style.cursor = 'default';
         }
+
+        // Persistencia automática de comentarios en localStorage (JSON)
+        document.addEventListener("DOMContentLoaded", () => {
+            const textareas = document.querySelectorAll("textarea");
+            
+            // Cargar datos guardados (en formato JSON)
+            const savedData = JSON.parse(localStorage.getItem("saveStoreNotes") || "{}");
+            
+            textareas.forEach(textarea => {
+                if (textarea.id && savedData[textarea.id]) {
+                    textarea.value = savedData[textarea.id];
+                }
+                
+                // Guardar automáticamente al escribir
+                textarea.addEventListener("input", (e) => {
+                    if (!e.target.id) return;
+                    const currentData = JSON.parse(localStorage.getItem("saveStoreNotes") || "{}");
+                    currentData[e.target.id] = e.target.value;
+                    localStorage.setItem("saveStoreNotes", JSON.stringify(currentData));
+                });
+            });
+        });
     </script>
 </body>
 </html>
