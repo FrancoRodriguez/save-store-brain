@@ -12,6 +12,11 @@
     <script type="module" src="stores.js"></script>
 </head>
 <body>
+    <!-- Global Loader -->
+    <div id="global-loader">
+        <img src="https://savestore.es/wp-content/uploads/2022/04/logo-save.svg" alt="Save Store Logo" class="loader-logo">
+    </div>
+
     <div class="app-container">
         <!-- Sidebar -->
         <aside class="sidebar">
@@ -149,6 +154,18 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const loader = document.getElementById('global-loader');
+                if(loader) {
+                    loader.classList.add('hidden');
+                }
+            }, 800); // 800ms minimum display time for the cool pulse effect
+        });
+    </script>
 
 </body>
 </html>
