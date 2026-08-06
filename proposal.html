@@ -295,27 +295,36 @@
                 </p>
             </div>
 
-            <!-- ROI Analysis -->
-            <div style="max-width: 800px; margin: 0 auto 60px auto;">
-                <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 24px; text-align: center;">El Business Case: ¿Por qué tiene sentido?</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+            <!-- PREMIUM ROI Analysis -->
+            <div style="width: 100%; margin: 0 auto 80px auto; background: var(--text-primary); color: white; border-radius: 24px; padding: 48px; position: relative; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
+                <!-- Ambient glow -->
+                <div style="position: absolute; top: -50%; left: -10%; width: 50%; height: 200%; background: radial-gradient(circle, rgba(52, 199, 89, 0.15) 0%, transparent 70%); pointer-events: none;"></div>
+                
+                <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 16px; text-align: center; position: relative; z-index: 1;">El Business Case</h2>
+                <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">Por qué esta inversión se amortiza sola antes del cierre fiscal.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; position: relative; z-index: 1;">
                     
                     <!-- Tarjeta 1: Horas -->
-                    <div style="background: var(--bg-panel); padding: 24px; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
-                        <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--text-primary);">⏱️ 960 Horas / Año</h3>
-                        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin: 0;">El tiempo estimado que central pierde cruzando reportes de las +40 tiendas. La integración reduce la conciliación manual a <strong>cero</strong>.</p>
+                    <div style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 32px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                        <div style="font-size: 48px; font-weight: 700; color: white; margin-bottom: 8px;">960h</div>
+                        <h3 style="font-size: 16px; color: rgba(255,255,255,0.8); margin-bottom: 16px; font-weight: 500;">Ahorradas al Año</h3>
+                        <p style="font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0;">El tiempo estimado que central pierde cruzando reportes. La integración reduce la conciliación manual a cero.</p>
                     </div>
                     
                     <!-- Tarjeta 2: Errores -->
-                    <div style="background: var(--bg-panel); padding: 24px; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
-                        <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--text-primary);">📉 0% Error Humano</h3>
-                        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Un error de tipeo en +40 cierres diarios cuesta dinero y horas de auditoría. Extraer los datos vírgenes desde la API garantiza exactitud al céntimo.</p>
+                    <div style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 32px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                        <div style="font-size: 48px; font-weight: 700; color: white; margin-bottom: 8px;">0%</div>
+                        <h3 style="font-size: 16px; color: rgba(255,255,255,0.8); margin-bottom: 16px; font-weight: 500;">Error Humano</h3>
+                        <p style="font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0;">Extraer los datos vírgenes directamente desde la API garantiza exactitud al céntimo. Cero horas de auditoría extra.</p>
                     </div>
                     
-                    <!-- Tarjeta 3: Dinero -->
-                    <div style="background: var(--bg-panel); padding: 24px; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
-                        <h3 style="font-size: 18px; margin-bottom: 12px; color: #28a745;">💰 Amortización: 8 Meses</h3>
-                        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Calculando la hora técnica a 20€, ahorrar 960 horas equivale a <strong>más de 19.000€ al año</strong>. El proyecto se paga solo antes de terminar el año fiscal.</p>
+                    <!-- Tarjeta 3: Dinero (Highlighted) -->
+                    <div style="background: linear-gradient(145deg, rgba(52, 199, 89, 0.2), rgba(52, 199, 89, 0.05)); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 32px; border-radius: 20px; border: 1px solid rgba(52, 199, 89, 0.3); text-align: center; box-shadow: 0 0 30px rgba(52, 199, 89, 0.1);">
+                        <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #34c759; font-weight: 700; margin-bottom: 8px;">ROI Garantizado</div>
+                        <div style="font-size: 48px; font-weight: 700; color: #34c759; margin-bottom: 8px;">8 Meses</div>
+                        <h3 style="font-size: 16px; color: rgba(255,255,255,0.9); margin-bottom: 16px; font-weight: 500;">Amortización Completa</h3>
+                        <p style="font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">Ahorrar 960 horas operativas equivale a más de <strong>19.000€ anuales</strong>. El proyecto se paga solo.</p>
                     </div>
 
                 </div>
