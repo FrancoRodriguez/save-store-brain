@@ -29,9 +29,52 @@ function renderComment(docData, docId) {
     `;
 }
 
-// Función global para borrar
+// Función global para borrar con modal personalizado
 window.deleteNote = (docId, phaseId) => {
-    if (confirm("¿Estás seguro de que quieres borrar esta nota?")) {
+    // Crear el overlay del modal
+    const overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+    overlay.style.display = 'flex';
+    overlay.style.justifyContent = 'center';
+    overlay.style.alignItems = 'center';
+    overlay.style.zIndex = '9999';
+    overlay.style.fontFamily = "'Inter', sans-serif";
+
+    // Crear la caja del modal
+    const modal = document.createElement('div');
+    modal.style.backgroundColor = 'var(--bg-card)';
+    modal.style.padding = '24px';
+    modal.style.borderRadius = '12px';
+    modal.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.2)';
+    modal.style.maxWidth = '400px';
+    modal.style.width = '90%';
+    modal.style.border = '1px solid var(--border-color)';
+
+    // Contenido
+    modal.innerHTML = `
+        <h3 style="margin-top: 0; margin-bottom: 12px; color: var(--text-primary); font-size: 18px;">Confirmar borrado</h3>
+        <p style="margin-bottom: 24px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">¿Estás seguro de que quieres borrar esta nota? Esta acción no se puede deshacer.</p>
+        <div style="display: flex; justify-content: flex-end; gap: 12px;">
+            <button id="cancel-btn" style="padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border-color); background: transparent; color: var(--text-primary); cursor: pointer; font-weight: 500;">Cancelar</button>
+            <button id="confirm-btn" style="padding: 8px 16px; border-radius: 8px; border: none; background: #ef4444; color: white; cursor: pointer; font-weight: 600;">Sí, Borrar</button>
+        </div>
+    `;
+
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+
+    // Eventos
+    document.getElementById('cancel-btn').addEventListener('click', () => {
+        document.body.removeChild(overlay);
+    });
+
+    document.getElementById('confirm-btn').addEventListener('click', () => {
+        document.body.removeChild(overlay);
         deleteDoc(doc(db, "proposal_notes", docId)).then(() => {
             if (window.editingNoteId === docId) {
                 cancelEdit(phaseId);
@@ -40,7 +83,7 @@ window.deleteNote = (docId, phaseId) => {
             console.error("Error deleting document: ", error);
             alert("Error al borrar la nota.");
         });
-    }
+    });
 };
 
 // Función global para iniciar la edición
