@@ -3,7 +3,8 @@ import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/
 
 const ALLOWED_EMAILS = [
     "rodriguezcfranco@gmail.com",
-    "rdgbalassi@gmail.com"
+    "rdgbalassi@gmail.com",
+    "franco.rodriguez@petscreening.com"
 ];
 
 // Comprobar estado de autenticación en cada carga de página
