@@ -47,7 +47,7 @@ window.deleteNote = (docId, phaseId) => {
 
     // Crear la caja del modal
     const modal = document.createElement('div');
-    modal.style.backgroundColor = 'var(--bg-card)';
+    modal.style.backgroundColor = 'var(--bg-body, #ffffff)';
     modal.style.padding = '24px';
     modal.style.borderRadius = '12px';
     modal.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.2)';
