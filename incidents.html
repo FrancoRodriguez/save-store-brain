@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incidencias - Save Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="https://savestore.es/wp-content/uploads/2022/04/logo-save.svg" alt="Save Store Logo" class="logo-img">
+            </div>
+                        <nav class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    Executive Summary
+                </a>
+                <a href="finance.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    Finance (Holded)
+                </a>
+                <a href="inventory.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    Inventory & Sales
+                </a>
+                <a href="incidents.html" class="nav-item active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Store Incidents
+                </a>
+                <a href="proposal.html" class="nav-item">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Proposal
+                </a>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">RB</div>
+                <div class="user-info">
+                    <span class="user-name">Rodrigo Balassi</span>
+                    <span class="user-role">CEO</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="greeting">
+                    <h1>Centro de Incidencias</h1>
+                    <p>Tickets centralizados de la red de tiendas en Madrid.</p>
+                </div>
+                <div class="header-actions">
+                    <div class="date-badge" style="color:var(--color-orange)">5 Abiertas</div>
+                </div>
+            </header>
+
+            <div class="details-grid" style="grid-template-columns: 1fr;">
+                <div class="detail-card glass">
+                    <div class="card-header">
+                        <h2>Incidencias Pendientes de Acción</h2>
+                    </div>
+                    <div class="incidents-list">
+                        <div class="incident-item">
+                            <div class="status-indicator critical"></div>
+                            <div class="incident-content">
+                                <h4 style="color:var(--color-red)">Problema Servidor TPV - Cajas bloqueadas</h4>
+                                <p><strong>Save Store Sol</strong> - <span style="color:var(--color-red)">[URGENTE] Hilo de 22 correos.</span> Los técnicos no pueden cobrar, cliente enfadado en tienda esperando factura manual.</p>
+                            </div>
+                            <button class="btn-small">Leer 22 Correos</button>
+                        </div>
+                        <div class="incident-item">
+                            <div class="status-indicator high"></div>
+                            <div class="incident-content">
+                                <h4>Horas Extra no reportadas en Bizneo (Julio)</h4>
+                                <p><strong>Save Store Goya</strong> - Empleados reclaman falta de pago. Las horas estaban en un Excel adjunto en un correo que se perdió en spam.</p>
+                            </div>
+                            <button class="btn-small">Cruzar con Bizneo</button>
+                        </div>
+                        <div class="incident-item">
+                            <div class="status-indicator high"></div>
+                            <div class="incident-content">
+                                <h4>Diferencia Inventario vs Físico</h4>
+                                <p><strong>Save Store Callao</strong> - Faltan 3 pantallas de iPhone 13 Pro en el ERP, pero están físicamente. Hay que conciliar a mano.</p>
+                            </div>
+                            <button class="btn-small">Revisar ERP</button>
+                        </div>
+                        <div class="incident-item">
+                            <div class="status-indicator medium"></div>
+                            <div class="incident-content">
+                                <h4>Factura de luz duplicada (Iberdrola)</h4>
+                                <p><strong>Save Store Norte</strong> - El gestor de tienda la pagó por caja chica y finanzas la pagó por banco. Hilo de 8 correos discutiendo el reembolso.</p>
+                            </div>
+                            <button class="btn-small">Ver Hilo</button>
+                        </div>
+                        <div class="incident-item">
+                            <div class="status-indicator medium"></div>
+                            <div class="incident-content">
+                                <h4>Reclamo de Garantía Apple (GSX)</h4>
+                                <p><strong>Save Store Sol</strong> - El ticket en GSX no se sincronizó con nuestra plataforma. Cliente lleva 15 días esperando respuesta.</p>
+                            </div>
+                            <button class="btn-small">Ver Ticket GSX</button>
+                        </div>
+                        <div class="incident-item">
+                            <div class="status-indicator medium"></div>
+                            <div class="incident-content">
+                                <h4>Solicitud de Vacaciones</h4>
+                                <p><strong>Save Store Goya</strong> - Encargado de tienda solicitó vacaciones por WhatsApp, no está cargado en Bizneo. Solapamiento de turnos inminente.</p>
+                            </div>
+                            <button class="btn-small">Cargar en Bizneo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

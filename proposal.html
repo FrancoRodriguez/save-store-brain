@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Proyecto - Save Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-proposal.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="https://savestore.es/wp-content/uploads/2022/04/logo-save.svg" alt="Save Store Logo" class="logo-img">
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    Executive Summary
+                </a>
+                <a href="finance.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    Finance (Holded)
+                </a>
+                <a href="inventory.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    Inventory & Sales
+                </a>
+                <a href="incidents.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Store Incidents
+                </a>
+                <a href="proposal.html" class="nav-item active">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Proposal
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <div class="proposal-hero">
+                <h1>Propuesta de Integración Tecnológica</h1>
+                <p>Centralizando la operativa de las +40 tiendas de Save Store. Finanzas, Stock, RRHH e Inteligencia Artificial en un solo lugar.</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="proposal-timeline">
+                
+                <!-- Fase 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-meta">Fase 1 (Semanas 1-3)</div>
+                    <div class="timeline-content">
+                        <h3>Mapeo Técnico y Conexión API</h3>
+                        <p>Analizaremos técnicamente la conexión a los datos. Trazaremos la ruta de integración exacta con las APIs de Holded y Bizneo para garantizar una lectura sólida y segura.</p>
+                        <ul style="margin-top: 12px; padding-left: 20px; color: var(--text-secondary); font-size: 15px; line-height: 1.6; list-style-type: none; margin-left: 0; padding-left: 0;">
+                            <li style="margin-bottom: 8px;">• <strong>Evaluación del Ecosistema API:</strong> Analizaremos cómo está configurada la contabilidad en Holded y la gestión de personal en Bizneo para su consumo automático.</li>
+                            <li style="margin-bottom: 8px;">• <strong>Mapeo de Sucursales:</strong> Vincularemos contablemente las +40 tiendas físicas con sus respectivos centros de costo para no perder el rastro de ningún euro.</li>
+                        </ul>
+                        
+                        <!-- Interacción Fase 1 -->
+                        <div style="margin-top: 24px; padding: 16px; background: rgba(0,0,0,0.02); border-radius: 12px; border: 1px solid var(--border-color);">
+                            <em style="display: block; margin-bottom: 12px; color: var(--text-secondary); font-size: 14px;">💡 <strong>Pregunta Estratégica:</strong> ¿Existe alguna tienda franquiciada que requiera un tratamiento fiscal distinto en Holded frente a las tiendas propias?</em>
+                            
+                            <div id="comment-box-1" style="display: flex; flex-direction: column; gap: 12px;">
+                                <textarea id="comment-1" placeholder="Deja tu comentario aquí..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); font-family: 'Inter', sans-serif; resize: vertical; min-height: 60px;"></textarea>
+                                <div style="display: flex; gap: 12px; align-items: center;">
+                                    <button onclick="submitComment(1)" class="btn-secondary" style="background: var(--bg-body); color: var(--text-primary); padding: 8px 16px; border: 1px solid var(--border-color); border-radius: 8px; font-weight: 600; cursor: pointer;">Guardar Nota</button>
+                                    <button onclick="approvePhase(1)" id="btn-approve-1" style="background: var(--text-primary); color: #fff; padding: 8px 16px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s;">Validar Fase 1</button>
+                                </div>
+                            </div>
+                            <div id="success-1" style="display: none; margin-top: 12px; color: #28a745; font-weight: 500; font-size: 14px;">✓ Guardado.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-meta">Fase 2 (Semanas 4-7)</div>
+                    <div class="timeline-content">
+                        <h3>Sincronización de Datos (El Cerebro)</h3>
+                        <p>Construiremos el motor de extracción de datos. La dirección accederá a la información vital de Finanzas y RRHH sin saltar entre plataformas.</p>
+                        <ul style="margin-top: 12px; padding-left: 20px; color: var(--text-secondary); font-size: 15px; line-height: 1.6; list-style-type: none; margin-left: 0; padding-left: 0;">
+                            <li style="margin-bottom: 8px;">• <strong>Lectura Financiera:</strong> Sistemas automáticos que vigilan las ventas, ingresos y descuadres de caja desde Holded.</li>
+                            <li style="margin-bottom: 8px;">• <strong>Supervisión de RRHH:</strong> Extracción de ausencias, bajas y horas extra directamente desde Bizneo.</li>
+                            <li>• <strong>Centralización:</strong> Toda esta información se empaqueta en tiempo real para ser mostrada en el panel de control.</li>
+                        </ul>
+                        
+                        <div style="margin-top: 16px; padding: 12px; background: rgba(0,0,0,0.03); border-radius: 8px; border-left: 4px solid #8e8e93; font-size: 14px; color: var(--text-secondary);">
+                            <strong>Nota sobre TPVs:</strong> El proceso actual en el que las tiendas cargan sus cierres diarios hacia Holded se mantendrá intacto. Nosotros extraeremos la información ya validada desde Holded para visualizarla. (Si actualmente es un proceso manual y desean automatizarlo en el futuro, podemos conversarlo).
+                        </div>
+
+                        <!-- Interacción Fase 2 -->
+                        <div style="margin-top: 24px; padding: 16px; background: rgba(0,0,0,0.02); border-radius: 12px; border: 1px solid var(--border-color);">
+                            <em style="display: block; margin-bottom: 12px; color: var(--text-secondary); font-size: 14px;">💡 <strong>Pregunta Estratégica:</strong> ¿A qué hora exacta de la noche consideran que todos los cierres de caja de las +40 tiendas ya deben estar volcados en Holded de forma definitiva?</em>
+                            
+                            <div id="comment-box-2" style="display: flex; flex-direction: column; gap: 12px;">
+                                <textarea id="comment-2" placeholder="Deja tu comentario aquí..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); font-family: 'Inter', sans-serif; resize: vertical; min-height: 60px;"></textarea>
+                                <div style="display: flex; gap: 12px; align-items: center;">
+                                    <button onclick="submitComment(2)" class="btn-secondary" style="background: var(--bg-body); color: var(--text-primary); padding: 8px 16px; border: 1px solid var(--border-color); border-radius: 8px; font-weight: 600; cursor: pointer;">Guardar Nota</button>
+                                    <button onclick="approvePhase(2)" id="btn-approve-2" style="background: var(--text-primary); color: #fff; padding: 8px 16px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s;">Validar Fase 2</button>
+                                </div>
+                            </div>
+                            <div id="success-2" style="display: none; margin-top: 12px; color: #28a745; font-weight: 500; font-size: 14px;">✓ Guardado.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-meta">Fase 3 (Semanas 8-10)</div>
+                    <div class="timeline-content">
+                        <h3>Dashboard Ejecutivo Integral</h3>
+                        <p>Diseñaremos la interfaz visual para la mesa directiva. Transformaremos los datos crudos en métricas claras para agilizar la toma de decisiones.</p>
+                        <ul style="margin-top: 12px; padding-left: 20px; color: var(--text-secondary); font-size: 15px; line-height: 1.6; list-style-type: none; margin-left: 0; padding-left: 0;">
+                            <li style="margin-bottom: 8px;">• <strong>Panel de Control:</strong> Visualización de métricas de alto nivel con un diseño elegante e intuitivo.</li>
+                            <li style="margin-bottom: 8px;">• <strong>Filtros Avanzados:</strong> Capacidad para hacer "zoom" y ver el rendimiento específico de la tienda de Sol, Goya, etc.</li>
+                            <li>• <strong>Gestión de Alertas:</strong> Avisos visuales inmediatos cuando se detecta un descuadre bancario o una falta de stock crítica.</li>
+                        </ul>
+
+                        <!-- Interacción Fase 3 -->
+                        <div style="margin-top: 24px; padding: 16px; background: rgba(0,0,0,0.02); border-radius: 12px; border: 1px solid var(--border-color);">
+                            <em style="display: block; margin-bottom: 12px; color: var(--text-secondary); font-size: 14px;">💡 <strong>Pregunta Estratégica:</strong> ¿Qué miembros de la junta directiva o supervisores tendrán acceso a este Dashboard? ¿Necesitamos restringir vistas según el cargo?</em>
+                            
+                            <div id="comment-box-3" style="display: flex; flex-direction: column; gap: 12px;">
+                                <textarea id="comment-3" placeholder="Deja tu comentario aquí..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); font-family: 'Inter', sans-serif; resize: vertical; min-height: 60px;"></textarea>
+                                <div style="display: flex; gap: 12px; align-items: center;">
+                                    <button onclick="submitComment(3)" class="btn-secondary" style="background: var(--bg-body); color: var(--text-primary); padding: 8px 16px; border: 1px solid var(--border-color); border-radius: 8px; font-weight: 600; cursor: pointer;">Guardar Nota</button>
+                                    <button onclick="approvePhase(3)" id="btn-approve-3" style="background: var(--text-primary); color: #fff; padding: 8px 16px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s;">Validar Fase 3</button>
+                                </div>
+                            </div>
+                            <div id="success-3" style="display: none; margin-top: 12px; color: #28a745; font-weight: 500; font-size: 14px;">✓ Guardado.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-meta">Fase 4 (Semanas 11-12)</div>
+                    <div class="timeline-content">
+                        <h3>Simulación, Calidad y Lanzamiento</h3>
+                        <p>Etapa final de validación. Garantizaremos un flujo de información perfecto y un sistema seguro, listo para operar en producción.</p>
+                        <ul style="margin-top: 12px; padding-left: 20px; color: var(--text-secondary); font-size: 15px; line-height: 1.6; list-style-type: none; margin-left: 0; padding-left: 0;">
+                            <li style="margin-bottom: 8px;">• <strong>Validación Financiera:</strong> Verificaremos que el céntimo mostrado en el Dashboard sea exactamente el mismo que dice Holded y el Banco.</li>
+                            <li style="margin-bottom: 8px;">• <strong>Formación Ejecutiva:</strong> Entrega del sistema y entrenamiento para los directivos que lo utilizarán.</li>
+                        </ul>
+
+                        <!-- Interacción Fase 4 -->
+                        <div style="margin-top: 24px; padding: 16px; background: rgba(0,0,0,0.02); border-radius: 12px; border: 1px solid var(--border-color);">
+                            <em style="display: block; margin-bottom: 12px; color: var(--text-secondary); font-size: 14px;">💡 <strong>Pregunta Estratégica:</strong> Para el lanzamiento, ¿haremos una transición paralela (usar los reportes viejos y el nuevo a la vez por 2 semanas) o un corte definitivo?</em>
+                            
+                            <div id="comment-box-4" style="display: flex; flex-direction: column; gap: 12px;">
+                                <textarea id="comment-4" placeholder="Deja tu comentario aquí..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); font-family: 'Inter', sans-serif; resize: vertical; min-height: 60px;"></textarea>
+                                <div style="display: flex; gap: 12px; align-items: center;">
+                                    <button onclick="submitComment(4)" class="btn-secondary" style="background: var(--bg-body); color: var(--text-primary); padding: 8px 16px; border: 1px solid var(--border-color); border-radius: 8px; font-weight: 600; cursor: pointer;">Guardar Nota</button>
+                                    <button onclick="approvePhase(4)" id="btn-approve-4" style="background: var(--text-primary); color: #fff; padding: 8px 16px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s;">Validar Fase 4</button>
+                                </div>
+                            </div>
+                            <div id="success-4" style="display: none; margin-top: 12px; color: #28a745; font-weight: 500; font-size: 14px;">✓ Guardado.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo Extra: Asistente IA -->
+            <div class="ai-section" style="max-width: 800px; margin: 0 auto 60px auto; padding: 40px; background: linear-gradient(135deg, rgba(29, 29, 31, 0.05) 0%, rgba(67, 67, 69, 0.02) 100%); border-radius: 24px; border: 1px solid var(--border-color); text-align: center;">
+                <svg width="48" height="48" fill="none" stroke="var(--text-primary)" stroke-width="1.5" viewBox="0 0 24 24" style="margin-bottom: 20px;"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 12L21.1 4.93A10 10 0 0 0 12 2v10z"></path><circle cx="12" cy="12" r="2"></circle></svg>
+                <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 16px;">Módulo Incluido: Asesor de Inteligencia Artificial</h2>
+                <p style="font-size: 16px; color: var(--text-secondary); line-height: 1.6; max-width: 600px; margin: 0 auto 24px auto;">
+                    El Dashboard estará <strong>AI-Ready</strong>. Incluiremos un apartado nativo donde podrás ingresar tu clave de API (OpenAI, Gemini o Claude) para activar un asistente virtual integrado.
+                </p>
+                <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.6; max-width: 600px; margin: 0 auto;">
+                    <em>Imagina escribir en un chat interno: <strong>"¿Qué tienda tuvo más incidencias de pantalla rota esta semana?"</strong> o <strong>"Resume las ausencias del personal en Madrid"</strong>, y que la IA te responda al instante cruzando los datos financieros y de RRHH.</em>
+                </p>
+            </div>
+
+            <!-- ROI Analysis -->
+            <div style="max-width: 800px; margin: 0 auto 60px auto;">
+                <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 24px; text-align: center;">El Business Case: ¿Por qué tiene sentido?</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+                    
+                    <!-- Tarjeta 1: Horas -->
+                    <div style="background: var(--bg-panel); padding: 24px; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+                        <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--text-primary);">⏱️ 960 Horas / Año</h3>
+                        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin: 0;">El tiempo estimado que central pierde cruzando reportes de las +40 tiendas. La integración reduce la conciliación manual a <strong>cero</strong>.</p>
+                    </div>
+                    
+                    <!-- Tarjeta 2: Errores -->
+                    <div style="background: var(--bg-panel); padding: 24px; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+                        <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--text-primary);">📉 0% Error Humano</h3>
+                        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Un error de tipeo en +40 cierres diarios cuesta dinero y horas de auditoría. Extraer los datos vírgenes desde la API garantiza exactitud al céntimo.</p>
+                    </div>
+                    
+                    <!-- Tarjeta 3: Dinero -->
+                    <div style="background: var(--bg-panel); padding: 24px; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+                        <h3 style="font-size: 18px; margin-bottom: 12px; color: #28a745;">💰 Amortización: 8 Meses</h3>
+                        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Calculando la hora técnica a 20€, ahorrar 960 horas equivale a <strong>más de 19.000€ al año</strong>. El proyecto se paga solo antes de terminar el año fiscal.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Pricing -->
+            <div class="pricing-section">
+                <div class="pricing-card">
+                    <h2 style="font-size: 24px; font-weight: 600;">Implementación Integral (Core + AI)</h2>
+                    <div class="price-amount">17.000€</div>
+                    <div class="price-terms">Pago inicial del 30% (5.100€) para arranque. Restante contra hitos (aprobación de fases).</div>
+                    
+                    <ul class="price-features" style="max-width: 400px; margin: 0 auto 40px auto;">
+                        <li><span class="check-icon">✓</span> Sincronización continua con Holded y Bizneo</li>
+                        <li><span class="check-icon">✓</span> Dashboard Directivo en tiempo real (+40 tiendas)</li>
+                        <li><span class="check-icon">✓</span> Módulo de Consultor IA <strong style="color: #28a745; font-size: 13px; margin-left: 4px;">(Bonificado - Habitualmente 3.000€)</strong></li>
+                        <li><span class="check-icon">✓</span> Eliminación de consolidación manual de Excels</li>
+                        <li><span class="check-icon">✓</span> 3 meses de soporte VIP post-lanzamiento</li>
+                    </ul>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Scripts para interactividad -->
+    <script>
+        function submitComment(phaseId) {
+            var text = document.getElementById('comment-' + phaseId).value;
+            if(text.trim() !== '') {
+                document.getElementById('comment-box-' + phaseId).style.display = 'none';
+                document.getElementById('success-' + phaseId).style.display = 'block';
+            }
+        }
+
+        function approvePhase(phaseId) {
+            var btn = document.getElementById('btn-approve-' + phaseId);
+            btn.style.background = '#28a745';
+            btn.style.color = '#fff';
+            btn.innerHTML = '✅ Fase Validada';
+            btn.disabled = true;
+            btn.style.cursor = 'default';
+        }
+    </script>
+</body>
+</html>

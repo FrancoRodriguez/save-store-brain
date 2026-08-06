@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - Save Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="https://savestore.es/wp-content/uploads/2022/04/logo-save.svg" alt="Save Store Logo" class="logo-img">
+            </div>
+                        <nav class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    Executive Summary
+                </a>
+                <a href="finance.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    Finance (Holded)
+                </a>
+                <a href="inventory.html" class="nav-item active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    Inventory & Sales
+                </a>
+                <a href="incidents.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Store Incidents
+                </a>
+                <a href="proposal.html" class="nav-item">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Proposal
+                </a>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">RB</div>
+                <div class="user-info">
+                    <span class="user-name">Rodrigo Balassi</span>
+                    <span class="user-role">CEO</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="greeting">
+                    <h1>Inventario y Red de Tiendas</h1>
+                    <p>Visión global de stock (42 sucursales en España) y alertas críticas.</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-secondary">Crear Órdenes de Compra Masivas</button>
+                </div>
+            </header>
+
+            <div class="metrics-grid">
+                <div class="metric-card glass">
+                    <div class="metric-header">
+                        <span class="metric-title">Stock Total Valorizado</span>
+                    </div>
+                    <div class="metric-value">$1,254,200</div>
+                    <div class="metric-trend neutral">42 tiendas activas</div>
+                </div>
+                <div class="metric-card glass">
+                    <div class="metric-header">
+                        <span class="metric-title">Ventas Globales (Hoy)</span>
+                    </div>
+                    <div class="metric-value">$48,450</div>
+                    <div class="metric-trend positive">Barcelona y Madrid liderando</div>
+                </div>
+                <div class="metric-card glass">
+                    <div class="metric-header">
+                        <span class="metric-title">Roturas de Stock Críticas</span>
+                    </div>
+                    <div class="metric-value">12</div>
+                    <div class="metric-trend negative" style="color:var(--color-red)">Pérdida estimada: $15,000/día</div>
+                </div>
+            </div>
+
+            <div class="details-grid" style="grid-template-columns: 1fr;">
+                <div class="detail-card glass">
+                    <div class="card-header">
+                        <h2>Alertas de Stock Bajo (Nivel Nacional)</h2>
+                        <a href="#" class="view-all">Ver reporte completo en ERP →</a>
+                    </div>
+                    <table style="width:100%; text-align:left; border-collapse: collapse;">
+                        <tr style="border-bottom: 0.5px solid var(--border-color); color: var(--text-secondary); font-size: 14px;">
+                            <th style="padding:12px 0;">Referencia (Repuesto Apple)</th>
+                            <th style="padding:12px 0;">Sucursal Afectada</th>
+                            <th style="padding:12px 0;">Stock Físico</th>
+                            <th style="padding:12px 0;">Mínimo Ideal</th>
+                            <th style="padding:12px 0; text-align:center;">Acción / Estado</th>
+                        </tr>
+                        <tr style="border-bottom: 0.5px solid var(--border-color); background: rgba(255, 59, 48, 0.05);">
+                            <td style="padding:16px 12px; font-weight:500;">Pantalla iPhone 13 Pro (OEM) <span style="display:block; font-size:11px; color:var(--text-secondary)">SKU: AP-SCR-13P</span></td>
+                            <td style="color:var(--text-secondary);">Save Store Barcelona Centro</td>
+                            <td style="color:var(--color-red); font-weight:600;">0 uds. <span style="font-size:11px; font-weight:normal">(Agotado)</span></td>
+                            <td style="color:var(--text-secondary);">20 uds.</td>
+                            <td style="text-align:center;"><button class="btn-small" style="color:var(--color-red); border-color:var(--color-red);">Compra Urgente</button></td>
+                        </tr>
+                        <tr style="border-bottom: 0.5px solid var(--border-color);">
+                            <td style="padding:16px 12px; font-weight:500;">Batería iPhone 12</td>
+                            <td style="color:var(--text-secondary);">Save Store Sevilla - Nervión</td>
+                            <td style="color:var(--color-orange); font-weight:600;">2 uds.</td>
+                            <td style="color:var(--text-secondary);">15 uds.</td>
+                            <td style="text-align:center;"><button class="btn-small">Mover de Central</button></td>
+                        </tr>
+                        <tr style="border-bottom: 0.5px solid var(--border-color); background: rgba(255, 149, 0, 0.05);">
+                            <td style="padding:16px 12px; font-weight:500;">Cámara Trasera iPhone 14 Pro Max</td>
+                            <td style="color:var(--text-secondary);">Save Store Valencia Sur</td>
+                            <td style="color:var(--color-orange); font-weight:600;">1 ud.</td>
+                            <td style="color:var(--text-secondary);">5 uds.</td>
+                            <td style="text-align:center;"><button class="btn-small">Pedir Reposición</button></td>
+                        </tr>
+                        <tr style="border-bottom: 0.5px solid var(--border-color);">
+                            <td style="padding:16px 12px; font-weight:500;">Chasis iPhone 11 (Negro)</td>
+                            <td style="color:var(--text-secondary);">Save Store Bilbao</td>
+                            <td style="color:var(--color-orange); font-weight:600;">3 uds.</td>
+                            <td style="color:var(--text-secondary);">10 uds.</td>
+                            <td style="text-align:center;"><span style="font-size:12px; color:var(--text-secondary)">Pedido en camino (Ingram)</span></td>
+                        </tr>
+                        <tr style="border-bottom: 0.5px solid var(--border-color);">
+                            <td style="padding:16px 12px; font-weight:500;">AirPods Pro Gen 2 (Reacondicionados)</td>
+                            <td style="color:var(--text-secondary);">Save Store Zaragoza</td>
+                            <td style="color:var(--color-red); font-weight:600;">1 ud.</td>
+                            <td style="color:var(--text-secondary);">12 uds.</td>
+                            <td style="text-align:center;"><button class="btn-small">Enviar Lote</button></td>
+                        </tr>
+                        <tr>
+                            <td style="padding:16px 12px; font-weight:500;">Pantalla iPad Air 5</td>
+                            <td style="color:var(--text-secondary);">Save Store Madrid Norte</td>
+                            <td style="color:var(--color-red); font-weight:600;">0 uds.</td>
+                            <td style="color:var(--text-secondary);">5 uds.</td>
+                            <td style="text-align:center;"><button class="btn-small">Compra Urgente</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="details-grid" style="grid-template-columns: 1fr;">
+                <div class="detail-card glass">
+                    <div class="card-header">
+                        <h2>Estado de la Red (Top Zonas)</h2>
+                        <a href="#" class="view-all">Ver mapa de las 42 sucursales →</a>
+                    </div>
+                    <div style="display:flex; gap: 24px;">
+                        <div style="flex:1; background:rgba(0,0,0,0.02); padding:20px; border-radius:12px;">
+                            <h4 style="margin-bottom:8px;">Zona Centro (Madrid y alrededores)</h4>
+                            <p style="font-size:24px; font-weight:bold;">14 <span style="font-size:14px; font-weight:normal; color:var(--text-secondary)">tiendas</span></p>
+                            <p style="font-size:13px; color:var(--color-green); margin-top:8px;">Ventas semanales: $84k (+12%)</p>
+                        </div>
+                        <div style="flex:1; background:rgba(0,0,0,0.02); padding:20px; border-radius:12px;">
+                            <h4 style="margin-bottom:8px;">Zona Este (Cataluña y Valencia)</h4>
+                            <p style="font-size:24px; font-weight:bold;">12 <span style="font-size:14px; font-weight:normal; color:var(--text-secondary)">tiendas</span></p>
+                            <p style="font-size:13px; color:var(--color-orange); margin-top:8px;">Problemas logísticos en BCN (Retraso 2 días)</p>
+                        </div>
+                        <div style="flex:1; background:rgba(0,0,0,0.02); padding:20px; border-radius:12px;">
+                            <h4 style="margin-bottom:8px;">Zona Sur (Andalucía)</h4>
+                            <p style="font-size:24px; font-weight:bold;">9 <span style="font-size:14px; font-weight:normal; color:var(--text-secondary)">tiendas</span></p>
+                            <p style="font-size:13px; color:var(--color-green); margin-top:8px;">Ventas semanales: $42k (+5%)</p>
+                        </div>
+                        <div style="flex:1; background:rgba(0,0,0,0.02); padding:20px; border-radius:12px;">
+                            <h4 style="margin-bottom:8px;">Zona Norte (País Vasco y Galicia)</h4>
+                            <p style="font-size:24px; font-weight:bold;">7 <span style="font-size:14px; font-weight:normal; color:var(--text-secondary)">tiendas</span></p>
+                            <p style="font-size:13px; color:var(--color-red); margin-top:8px;">2 tiendas reportan caída de sistema TPV</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

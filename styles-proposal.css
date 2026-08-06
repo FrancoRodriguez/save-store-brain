@@ -1,0 +1,202 @@
+/* Proposal Specific Styles */
+.proposal-hero {
+    text-align: center;
+    padding: 60px 0;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.proposal-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #1d1d1f 0%, #434345 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.proposal-hero p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Timeline Vertical */
+.proposal-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+.timeline-item {
+    padding: 24px;
+    margin-bottom: 24px;
+    position: relative;
+    border-left: 2px solid var(--accent);
+    background: var(--bg-panel);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-radius: 0 16px 16px 0;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(8px);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    left: -7px;
+    top: 32px;
+    box-shadow: 0 0 0 4px var(--bg-dark);
+}
+
+.timeline-meta {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.timeline-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.timeline-content p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Accordion for Requirements */
+.requirements-section {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+.accordion {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    border: 0.5px solid var(--border-color);
+}
+
+.accordion-summary {
+    padding: 20px 24px;
+    background: var(--bg-panel);
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.accordion-summary:hover {
+    background: var(--bg-panel-hover);
+}
+
+.accordion-details {
+    padding: 0 24px 24px 24px;
+    background: var(--bg-panel);
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+    display: none;
+}
+
+.accordion.open .accordion-details {
+    display: block;
+}
+
+/* Pricing Card */
+.pricing-section {
+    max-width: 800px;
+    margin: 0 auto 80px auto;
+    text-align: center;
+}
+
+.pricing-card {
+    background: var(--bg-panel);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 0.5px solid var(--border-color);
+    border-radius: 24px;
+    padding: 48px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.05);
+    margin-top: 32px;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.08);
+}
+
+.price-amount {
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin: 24px 0;
+    color: var(--text-primary);
+}
+
+.price-terms {
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin-bottom: 32px;
+}
+
+.price-features {
+    text-align: left;
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.price-features li {
+    padding: 12px 0;
+    border-bottom: 0.5px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+}
+
+.price-features li:last-child {
+    border-bottom: none;
+}
+
+.check-icon {
+    color: var(--color-green);
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: var(--text-primary);
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    transform: scale(0.98);
+    background: #000;
+}
