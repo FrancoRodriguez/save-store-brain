@@ -339,46 +339,49 @@
             
             <!-- Pricing -->
             <div class="pricing-section">
-                <div class="pricing-card" style="transition: all 0.5s ease; position: relative;">
-                    <h2 style="font-size: 24px; font-weight: 600;">Implementación Integral (Core + AI)</h2>
+                <div class="pricing-card" style="position: relative;">
+                    <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 32px;">Implementación Integral (Core + AI)</h2>
                     
-                    <!-- Lock Screen -->
-                    <div id="price-lock-screen" style="text-align: center; padding: 60px 0 40px 0; transition: opacity 0.3s ease;">
-                        <div style="width: 64px; height: 64px; background: rgba(0,0,0,0.04); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px auto;">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    <ul class="price-features" style="max-width: 400px; margin: 0 auto 40px auto;">
+                        <li><span class="check-icon">✓</span> Sincronización continua con Holded y Bizneo</li>
+                        <li><span class="check-icon">✓</span> Dashboard Directivo en tiempo real (+40 tiendas)</li>
+                        <li>
+                            <span class="check-icon">✓</span> Módulo de Consultor IA
+                            <span style="display: block; color: #28a745; font-size: 13px; margin-left: 28px; margin-top: 4px; font-weight: 600;">(Bonificado - Habitualmente 3.000€)</span>
+                        </li>
+                        <li><span class="check-icon">✓</span> Eliminación de consolidación manual de Excels</li>
+                        <li><span class="check-icon">✓</span> 3 meses de soporte VIP post-lanzamiento</li>
+                    </ul>
+                    
+                    <div style="margin-top: 32px; margin-bottom: 40px; padding: 20px; background: rgba(0,0,0,0.02); border-radius: 12px; border: 1px solid var(--border-color); text-align: left;">
+                        <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">🔒 Infraestructura y Seguridad (Gestión Propia)</h4>
+                        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+                            Para garantizar la soberanía de los datos, el hosting (servidor) y el dominio serán pagados y administrados directamente por Save Store. <strong>La configuración completa de esta infraestructura corre por nuestra cuenta como parte de la implementación.</strong><br><br>
+                            <strong>Estimación de Costes:</strong> Para el tráfico interno operativo de +40 tiendas, se recomienda la plataforma <em>Railway</em>, con un coste estimado de mantenimiento de <strong>~15€ a 30€ al mes</strong> (gastos de infraestructura).
+                        </p>
+                    </div>
+
+                    <!-- Divider -->
+                    <hr style="border: none; border-top: 1px solid var(--border-color); margin: 0 0 40px 0;">
+
+                    <!-- Lock Screen for Price -->
+                    <div id="price-lock-screen" style="text-align: center; padding: 20px 0; transition: opacity 0.3s ease;">
+                        <div style="width: 48px; height: 48px; background: rgba(0,0,0,0.04); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                         </div>
-                        <h3 style="font-size: 20px; margin-bottom: 12px; font-weight: 600;">Presupuesto Protegido</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 32px; font-size: 15px; max-width: 320px; margin-left: auto; margin-right: auto;">Introduce tu código de acceso personal para visualizar la propuesta económica.</p>
+                        <h3 style="font-size: 18px; margin-bottom: 8px; font-weight: 600;">Presupuesto Protegido</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 14px;">Introduce tu código de acceso para visualizar la inversión.</p>
                         
-                        <div style="display: flex; gap: 8px; justify-content: center; max-width: 240px; margin: 0 auto;">
-                            <input type="password" id="secret-code-input" placeholder="•••" maxlength="3" style="flex: 1; padding: 16px; border-radius: 12px; border: 2px solid var(--border-color); background: var(--bg-body); font-size: 24px; text-align: center; letter-spacing: 12px; outline: none; transition: border-color 0.2s; font-family: monospace;" onkeyup="if(this.value === '172') window.unlockPrice()" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border-color)'">
+                        <div style="display: flex; gap: 8px; justify-content: center; max-width: 200px; margin: 0 auto;">
+                            <input type="password" id="secret-code-input" placeholder="•••" maxlength="3" style="flex: 1; padding: 12px; border-radius: 12px; border: 2px solid var(--border-color); background: var(--bg-body); font-size: 20px; text-align: center; letter-spacing: 8px; outline: none; transition: border-color 0.2s; font-family: monospace;" onkeyup="if(this.value === '172') window.unlockPrice()" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border-color)'">
                         </div>
                         <div id="code-error" style="color: #ff3b30; font-size: 13px; margin-top: 12px; opacity: 0; transition: opacity 0.2s;">Código incorrecto</div>
                     </div>
 
-                    <!-- Revealed Content (Hidden by default) -->
+                    <!-- Revealed Price (Hidden by default) -->
                     <div id="price-reveal-content" style="display: none; opacity: 0; transform: translateY(20px); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
-                        <div class="price-amount" style="animation: popIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;">17.000€</div>
-                        <div class="price-terms">Pago inicial del 30% (5.100€) para arranque. Restante contra hitos (aprobación de fases).</div>
-                        
-                        <ul class="price-features" style="max-width: 400px; margin: 0 auto 40px auto;">
-                            <li><span class="check-icon">✓</span> Sincronización continua con Holded y Bizneo</li>
-                            <li><span class="check-icon">✓</span> Dashboard Directivo en tiempo real (+40 tiendas)</li>
-                            <li>
-                                <span class="check-icon">✓</span> Módulo de Consultor IA
-                                <span style="display: block; color: #28a745; font-size: 13px; margin-left: 28px; margin-top: 4px; font-weight: 600;">(Bonificado - Habitualmente 3.000€)</span>
-                            </li>
-                            <li><span class="check-icon">✓</span> Eliminación de consolidación manual de Excels</li>
-                            <li><span class="check-icon">✓</span> 3 meses de soporte VIP post-lanzamiento</li>
-                        </ul>
-                        
-                        <div style="margin-top: 32px; padding: 20px; background: rgba(0,0,0,0.02); border-radius: 12px; border: 1px solid var(--border-color); text-align: left;">
-                            <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">🔒 Infraestructura y Seguridad (Gestión Propia)</h4>
-                            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-                                Para garantizar la soberanía de los datos, el hosting (servidor) y el dominio serán pagados y administrados directamente por Save Store. <strong>La configuración completa de esta infraestructura corre por nuestra cuenta como parte de la implementación.</strong><br><br>
-                                <strong>Estimación de Costes:</strong> Para el tráfico interno operativo de +40 tiendas, se recomienda la plataforma <em>Railway</em>, con un coste estimado de mantenimiento de <strong>~15€ a 30€ al mes</strong> (gastos de infraestructura).
-                            </p>
-                        </div>
+                        <div class="price-amount" style="font-size: 64px; font-weight: 700; letter-spacing: -2px; margin-bottom: 8px; background: linear-gradient(135deg, var(--text-primary) 0%, #666 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">17.000€</div>
+                        <div class="price-terms" style="color: var(--text-secondary); font-size: 15px; margin-bottom: 0;">Pago inicial del 30% (5.100€) para arranque.<br>Restante contra hitos (aprobación de fases).</div>
                     </div>
                 </div>
             </div>
@@ -387,7 +390,7 @@
     </div>
 </div>
 
-    <!-- Scripts para interactividad -->
+<!-- Scripts para interactividad -->
     <script>
         
         window.unlockPrice = function() {
