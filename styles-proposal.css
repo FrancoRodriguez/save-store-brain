@@ -2,7 +2,7 @@
 .proposal-hero {
     text-align: center;
     padding: 60px 0;
-    max-width: 800px;
+    width: 100%;
     margin: 0 auto 40px auto;
 }
 
@@ -25,7 +25,7 @@
 /* Timeline Vertical */
 .proposal-timeline {
     position: relative;
-    max-width: 800px;
+    width: 100%;
     margin: 0 auto 60px auto;
 }
 
@@ -81,7 +81,7 @@
 
 /* Accordion for Requirements */
 .requirements-section {
-    max-width: 800px;
+    width: 100%;
     margin: 0 auto 60px auto;
 }
 
@@ -123,7 +123,7 @@
 
 /* Pricing Card */
 .pricing-section {
-    max-width: 800px;
+    width: 100%;
     margin: 0 auto 80px auto;
     text-align: center;
 }
