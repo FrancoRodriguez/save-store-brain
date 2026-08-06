@@ -1,4 +1,6 @@
-import { db } from './firebase-config.js';
+import os
+
+new_stores_js = """import { db } from './firebase-config.js';
 import { collection, onSnapshot } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -276,3 +278,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnClosePanel) btnClosePanel.addEventListener('click', closePanel);
     if (slideBackdrop) slideBackdrop.addEventListener('click', closePanel);
 });
+"""
+
+with open("stores.js", "w", encoding="utf-8") as f:
+    f.write(new_stores_js)
+
+print("Updated stores.js")
