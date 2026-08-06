@@ -296,40 +296,47 @@
             </div>
 
             <!-- PREMIUM ROI Analysis -->
-            <div style="width: 100%; margin: 0 auto 80px auto; background: var(--text-primary); color: white; border-radius: 24px; padding: 48px; position: relative; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
-                <!-- Ambient glow -->
-                <div style="position: absolute; top: -50%; left: -10%; width: 50%; height: 200%; background: radial-gradient(circle, rgba(52, 199, 89, 0.15) 0%, transparent 70%); pointer-events: none;"></div>
-                
-                <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 16px; text-align: center; position: relative; z-index: 1;">El Business Case</h2>
-                <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">Por qué esta inversión se amortiza sola antes del cierre fiscal.</p>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; position: relative; z-index: 1;">
+            <div style="width: 100%; margin: 0 auto 80px auto; background: #000; color: #fff; border-radius: 32px; padding: 64px; text-align: center; box-shadow: 0 30px 60px rgba(0,0,0,0.12);">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h2 style="font-size: 40px; font-weight: 700; margin-bottom: 24px; letter-spacing: -1px; background: linear-gradient(135deg, #fff 0%, #a1a1a6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">El Valor Real para Save Store</h2>
+                    <p style="font-size: 18px; color: #86868b; line-height: 1.6; margin-bottom: 56px;">No estamos vendiendo software. Estamos comprando tiempo estratégico para la dirección y construyendo los cimientos para escalar a 100 tiendas sin colapsar la central.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; text-align: left;">
                     
-                    <!-- Tarjeta 1: Horas -->
-                    <div style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 32px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
-                        <div style="font-size: 48px; font-weight: 700; color: white; margin-bottom: 8px;">960h</div>
-                        <h3 style="font-size: 16px; color: rgba(255,255,255,0.8); margin-bottom: 16px; font-weight: 500;">Ahorradas al Año</h3>
-                        <p style="font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0;">El tiempo estimado que central pierde cruzando reportes. La integración reduce la conciliación manual a cero.</p>
+                    <!-- Valor 1: Tiempo -->
+                    <div style="background: #1d1d1f; border-radius: 24px; padding: 32px; border: 1px solid rgba(255,255,255,0.05);">
+                        <div style="width: 48px; height: 48px; background: rgba(52, 199, 89, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#34c759" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <h3 style="font-size: 20px; color: #fff; margin-bottom: 16px; font-weight: 600;">Elimina 960h de Trabajo Manual</h3>
+                        <p style="font-size: 15px; color: #86868b; line-height: 1.5; margin: 0;">Fin a la era de cruzar Excels. Al conectar Holded, el banco y el stock de forma nativa, el cierre de mes pasa de ser una odisea de días a un proceso automático de segundos.</p>
                     </div>
                     
-                    <!-- Tarjeta 2: Errores -->
-                    <div style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 32px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
-                        <div style="font-size: 48px; font-weight: 700; color: white; margin-bottom: 8px;">0%</div>
-                        <h3 style="font-size: 16px; color: rgba(255,255,255,0.8); margin-bottom: 16px; font-weight: 500;">Error Humano</h3>
-                        <p style="font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0;">Extraer los datos vírgenes directamente desde la API garantiza exactitud al céntimo. Cero horas de auditoría extra.</p>
+                    <!-- Valor 2: Control -->
+                    <div style="background: #1d1d1f; border-radius: 24px; padding: 32px; border: 1px solid rgba(255,255,255,0.05);">
+                        <div style="width: 48px; height: 48px; background: rgba(0, 113, 227, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        </div>
+                        <h3 style="font-size: 20px; color: #fff; margin-bottom: 16px; font-weight: 600;">Control Total para el CEO</h3>
+                        <p style="font-size: 15px; color: #86868b; line-height: 1.5; margin: 0;">Una única fuente de verdad en tu bolsillo. Monitoriza el <em>burn rate</em>, anticípate a roturas de stock y genera reportes para el directorio con un solo clic, sin depender de terceros.</p>
                     </div>
                     
-                    <!-- Tarjeta 3: Dinero (Highlighted) -->
-                    <div style="background: linear-gradient(145deg, rgba(52, 199, 89, 0.2), rgba(52, 199, 89, 0.05)); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 32px; border-radius: 20px; border: 1px solid rgba(52, 199, 89, 0.3); text-align: center; box-shadow: 0 0 30px rgba(52, 199, 89, 0.1);">
-                        <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #34c759; font-weight: 700; margin-bottom: 8px;">ROI Garantizado</div>
-                        <div style="font-size: 48px; font-weight: 700; color: #34c759; margin-bottom: 8px;">8 Meses</div>
-                        <h3 style="font-size: 16px; color: rgba(255,255,255,0.9); margin-bottom: 16px; font-weight: 500;">Amortización Completa</h3>
-                        <p style="font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">Ahorrar 960 horas operativas equivale a más de <strong>19.000€ anuales</strong>. El proyecto se paga solo.</p>
+                    <!-- Valor 3: Amortización -->
+                    <div style="background: linear-gradient(180deg, #1d1d1f 0%, #000 100%); border-radius: 24px; padding: 32px; border: 1px solid rgba(52, 199, 89, 0.3); position: relative; overflow: hidden;">
+                        <!-- Resplandor sutil -->
+                        <div style="position: absolute; top: 0; right: 0; width: 100%; height: 100%; background: radial-gradient(circle at top right, rgba(52, 199, 89, 0.15), transparent 70%); pointer-events: none;"></div>
+                        
+                        <div style="width: 48px; height: 48px; background: rgba(52, 199, 89, 0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; position: relative; z-index: 1;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#34c759" stroke-width="2"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <h3 style="font-size: 20px; color: #fff; margin-bottom: 16px; font-weight: 600; position: relative; z-index: 1;">Retorno de Inversión en Meses</h3>
+                        <p style="font-size: 15px; color: #86868b; line-height: 1.5; margin: 0; position: relative; z-index: 1;">Ahorrar cientos de horas operativas y evitar errores de conciliación se traduce en más de <strong>19.000€ recuperados al año</strong>. El proyecto se paga solo en menos de un ciclo fiscal.</p>
                     </div>
 
                 </div>
             </div>
-
+            
             <!-- Pricing -->
             <div class="pricing-section">
                 <div class="pricing-card">
