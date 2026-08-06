@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Restringido - Save Store Brain</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--bg-body);
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+        .login-card {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            border: 1px solid var(--border-color);
+        }
+        .login-card img {
+            width: 150px;
+            margin-bottom: 24px;
+        }
+        .login-card h2 {
+            margin-top: 0;
+            color: var(--text-primary);
+        }
+        .login-card p {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+        .btn-google {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 12px;
+            background: #fff;
+            color: #333;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-google:hover {
+            background: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .btn-google img {
+            width: 20px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <img src="https://savestore.es/wp-content/uploads/2022/04/logo-save.svg" alt="Save Store Logo">
+        <h2>Acceso Restringido</h2>
+        <p>Este prototipo de gestión (Save Store Brain) es privado. Inicia sesión con tu cuenta autorizada para acceder.</p>
+        
+        <button id="btn-login" class="btn-google">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+            Iniciar sesión con Google
+        </button>
+    </div>
+
+    <!-- Firebase Auth Script -->
+    <script type="module">
+        import { auth, provider } from './firebase-config.js';
+        import { signInWithPopup } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+        
+        // Importar auth-guard para manejar la redirección
+        import './auth-guard.js';
+
+        document.getElementById('btn-login').addEventListener('click', () => {
+            signInWithPopup(auth, provider)
+                .catch((error) => {
+                    console.error("Error en login:", error);
+                    alert("Error al iniciar sesión: " + error.message);
+                });
+        });
+    </script>
+</body>
+</html>
